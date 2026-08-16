@@ -27,7 +27,10 @@
         <!-- </header> -->
         <!-- <h2 class="pricing__header">Pricing</h2> -->
         <p class="pricing__description">The pricing depends on each solution, and we also strive to offer solutions to suit our customers' needs the best. Please kindly fill out this form by specifying the timeline for completing your project to let us know what you need for your services, and our team will make sure to get back to you as soon as possible.</p>
-        <form class="pricing__form">
+        <!-- Set data-endpoint to the URL of a form-handling service (e.g. Formspree)
+             to enable submissions. Until then the form reports that it is unconfigured
+             instead of silently discarding what the visitor typed. -->
+        <form class="pricing__form" data-endpoint="" novalidate>
             <div class="form__group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -45,7 +48,9 @@
                 <textarea id="details" name="details" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn form__submit">Submit Request</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
         </form>
     </div>
+    <script src="assets/js/contact-form.js"></script>
 </body>
 </html>
