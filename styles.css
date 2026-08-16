@@ -499,3 +499,22 @@ body {
 .form__submit:hover {
   background-color: var(--secondary-color);
 }
+
+.form__submit:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+.form__status {
+  margin-top: 1rem;
+  text-align: left;
+  color: var(--text-light);
+}
+
+.form__status[data-state="error"] {
+  color: #f87171;
+}
+
+.form__status[data-state="success"] {
+  color: #4ade80;
+}
