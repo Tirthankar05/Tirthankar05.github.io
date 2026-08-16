@@ -3,10 +3,18 @@
   <head> <!-- ===( CODE AASHU )=== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src 'self' https://cdn.jsdelivr.net; font-src https://cdn.jsdelivr.net; img-src 'self'; script-src 'self'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
       rel="stylesheet"
+      integrity="sha384-OKAvYwAk6yCmZZfQIPUl2+UUg5gMr0owRC/uoJozj0BVGLK2lTgw/NgPoE+YZlxD"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <title>Ajayla</title>
     <link rel="icon" type="image/png" href="assets/logo.jpeg">
@@ -310,14 +318,6 @@
       </div>
     </div>
 
-    <script>
-      const questionBox = document.getElementsByClassName("question__box");
-
-      for (let i = 0; i < questionBox.length; i++) {
-        questionBox[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-        });
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

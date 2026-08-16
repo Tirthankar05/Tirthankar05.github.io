@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="assets/icon.png">
     <title>Ajayla - Pricing</title>
@@ -27,7 +29,7 @@
         <!-- </header> -->
         <!-- <h2 class="pricing__header">Pricing</h2> -->
         <p class="pricing__description">The pricing depends on each solution, and we also strive to offer solutions to suit our customers' needs the best. Please kindly fill out this form by specifying the timeline for completing your project to let us know what you need for your services, and our team will make sure to get back to you as soon as possible.</p>
-        <form class="pricing__form">
+        <form class="pricing__form" method="post" autocomplete="off">
             <div class="form__group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
